@@ -1,0 +1,13 @@
+# 本地 GPU 环境锁定版本（2026-07-22 在 GTX 1650 上实测跑通）
+# 兼容显卡：GTX 1650 (Turing / sm_75) 与 RTX 4070 Ti Super (Ada / sm_89)
+# 前提：Python 3.12.x（cu121 wheel 按 Python 版本编译，3.13 装不上）
+# 安装命令见 SETUP_本地环境.md，torch/torchvision 必须走 pytorch 官方 cu121 索引
+
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+fastai==2.8.7
+fastcore==2.1.5
+jupyterlab==4.6.2
+pandas==3.0.3
+numpy==2.4.4
